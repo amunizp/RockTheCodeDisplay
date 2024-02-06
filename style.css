@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --font-size-base: 16px;
+  /* Espaciados */
+  --spacing-small: 0.5rem; /* 8px */
+  --spacing-medium: 1rem; /* 16px */
+  --spacing-med-lg: 1.5rem;
+  --spacing-large: 2rem; /* 32px */
+  --spacing-xlarge: 4rem; /*64px*/
+  /*colors*/
+  --main-color: #50763d;
+  --main-color-transparancy: #e3e6e2b0;
+
+  --main-color-1: #224099;
+  --main-color-2: #189d98;
+  --main-color-3: #78c486;
+  --main-color-4: #f9d445;
+  --main-color-5: #c09201;
+  --main-color-text: #5a4a42;
+  --background-mesh-color: #28aae10a;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--main-color-3);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+nav {
+  margin: 10px;
+}
+ul.nav-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  list-style: none;
+  text-align: center;
+}
+
+section.hero {
+  background-image: url('./assets/images/WindowPoppingOut.jpg');
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 80dvh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+article.RML > h2 {
+  color: var(--main-color);
+}
+article.RML > h2 > span {
+  color: var(--main-color-3);
+}
+
+article.RML > h3.subheading {
+  color: var(--main-color-text);
+}
+article.RML > ul.aside-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+ul.aside-list > li > aside.color5 {
+  color: var(--main-color-5);
+}
+ul.aside-list > li > aside.color2 {
+  color: var(--main-color-2);
+}
+ul.aside-list > li > aside.color3 {
+  color: var(--main-color-3);
+}
+ul.aside-list > li > aside.color4 {
+  color: var(--main-color-4);
+}
+article.RML {
+  background-color: var(--main-color-transparancy);
+  color: var(--main-color-text);
+  border-radius: 10px;
+  width: 50dvh;
+  padding: 10px;
+  margin: 5dvh;
+  text-align: center;
+  min-width: 220px;
+}
+article.cards {
+  padding: 10px 0px;
+}
+article.cards > h3.subheading {
+  color: var(--main-color-text);
+  text-align: center;
+}
+ul.facilities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+  margin-top: 20px;
+}
+
+ul.facilities li {
+  flex: 1 1 210px; /* Adjust the width as needed for responsiveness */
+  max-width: 205px;
+  min-width: 200px; /* Adjust the max-width as needed for responsiveness */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+ul.facilities figure {
+  margin: 0;
+  background-color: var(--main-color-3);
+  box-shadow: 5px -5px var(--main-color);
+  padding: 5px;
+  border-radius: 10px;
+  height: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ul.facilities figure figcaption {
+  text-align: center;
+  /* no puedo aliniar vertical mente */
+}
+
+ul.facilities figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+section.CallToAction {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+section.CallToAction > img {
+  max-width: 500px;
+  object-fit: cover;
+}
+button {
+  background-color: var(--main-color);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+section.CallToAction > #join {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  background-color: var(--main-color-3);
+  flex-grow: 4; /* esto no parece hacer nada*/
+  border-radius: 0;
+  width: 100%;
+  margin: 0px;
+  text-align: center;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+footer > img {
+  object-fit: scale-down;
+  width: 200px;
+}
+
+@media (max-width: 900px) {
+  section.CallToAction {
+    flex-direction: column;
+    align-items: center;
+  }
+  section.CallToAction > img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+@media (max-width: 600px) {
+  ul.nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 336px) {
+  ul.nav-list {
+    display: none;
+  }
+}
