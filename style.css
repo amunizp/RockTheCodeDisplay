@@ -128,9 +128,13 @@ ul.facilities figure {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 5px;
 }
-ul.facilities figure figcaption {
+ul.facilities figure > figcaption {
   text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
   /* no puedo aliniar vertical mente */
 }
 
