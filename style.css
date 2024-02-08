@@ -12,7 +12,7 @@
   --spacing-xlarge: 4rem; /*64px*/
   /*colors*/
   --main-color: #50763d;
-  --main-color-transparancy: #e3e6e2b0;
+  --main-color-transparancy: rgba(250, 250, 250, 0.9);
 
   --main-color-1: #224099;
   --main-color-2: #189d98;
@@ -22,16 +22,31 @@
   --main-color-text: #5a4a42;
   --background-mesh-color: #28aae10a;
 }
+.aside-header {
+  font-weight: bolder;
+  text-shadow: -1px -1px 0 var(--main-color-text),
+    1px -1px 0 var(--main-color-text), -1px 1px 0 var(--main-color-text),
+    1px 1px 0 var(--main-color-text);
+  /* text-shadow: var(--main-color-text) 1px 1px 4px; */
+}
 header {
   display: flex;
   justify-content: space-between;
   background-color: var(--main-color-3);
   position: sticky;
+  padding: 5px;
   top: 0;
   z-index: 5;
 }
 nav {
   margin: 10px;
+}
+a {
+  text-decoration: none !important;
+}
+:any-link {
+  cursor: pointer;
+  text-decoration: underline;
 }
 ul.nav-list {
   display: flex;
